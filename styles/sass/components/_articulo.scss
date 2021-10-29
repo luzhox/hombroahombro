@@ -1,306 +1,337 @@
-#articulo{
-    line-height: 24px;
-        font-size:16px;
-        text-align: justify;
-        font-weight: 400;
+#articulo {
+  line-height: 24px;
+  font-size: 16px;
+  text-align: justify;
+  font-weight: 400;
 
-        .size-full{
-
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        
-        }
-.container{
+  .size-full {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .container {
     display: flex;
 
     flex-flow: column;
 
-
-    @include tablet{
-        flex-flow: wrap;
- 
+    @include tablet {
+      flex-flow: wrap;
     }
-}
+  }
 
-.wp-block-image{
+  .wp-block-image {
     margin-top: 1em;
-}
-        .texto-articulo{
-            line-height: 24px;
-            font-size:16px;
-            text-align: justify;
-            font-weight: 400;
-            color:#747474;
-        }
-    h2{ 
-        width: 100%;
-        text-align: left;
-        font-weight: 900;
-        font-size: 22px;
-        line-height: 120%;
-
-        @include tablet{
-            font-size: 38px;
-            line-height: 120%;
-        }
+  }
+  h2 {
+    width: 100%;
+    text-align: left;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 120%;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      width: 34px;
+      height: 3px;
+      background-color: $primaryButton;
+      margin-top: 10px;
+      margin-bottom: 32px;
     }
 
-    p{
-        line-height: 24px;
-        font-size:16px;
-        text-align: justify;
-        font-weight: 300;
-        font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    @include tablet {
+      font-size: 38px;
+      line-height: 120%;
     }
-    strong{
-        font-weight: 600;
-        color:$grisOscuro;
-        margin-top:20px;
-        display: inline-block;
+  }
+  p {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 300;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+  strong {
+    font-weight: 600;
+    color: $grisOscuro;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  .texto-articulo {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 400;
+    color: #747474;
+    h2 {
+      font-size: 24px;
+      line-height: 120%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &::before {
+        display: none;
+      }
     }
-    .wp-block-quote{
-        font-size: 24px;
-        line-height: 30px;
-        display: inline-block;
+    p {
+      margin-bottom: 16px;
+      em {
+        &::before {
+          content: '“';
+          display: inline-block;
+          margin-right: 8px;
+          font-size: 32px;
+          font-weight: 600;
+          color: $primaryButton;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        color: $primaryButton;
         font-weight: 700;
-        color:$grisOscuro;
+      }
+    }
+    .wp-block-image,
+    .wp-block-gallery {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+    .wp-block-image {
+      .aligncenter {
+        width: 100%;
+      }
+    }
+  }
 
-        &::before{
-            content:'';
-            color:$primary;
-            font-weight: 700;
-            display: inline-block;
+  .wp-block-quote {
+    font-size: 24px;
+    line-height: 30px;
+    display: inline-block;
+    font-weight: 700;
+    color: $grisOscuro;
+
+    &::before {
+      content: '';
+      color: $primary;
+      font-weight: 700;
+      display: inline-block;
+    }
+  }
+
+  .wp-block-image {
+    figure {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .wp-block-quote {
+    display: block;
+    margin: 30px 0px;
+  }
+  .wp-block-quote p {
+    font-style: italic;
+    color: $grisOscuro;
+    font-size: 25px;
+    line-height: 130%;
+    font-weight: 300;
+  }
+  .wp-block-quote p::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    font-weight: 300;
+    margin-right: 10px;
+    background-image: url(../images/comillas.png);
+    background-size: 80%;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: $primary;
+    font-size: 28px;
+  }
+
+  .wp-block-quote p::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-left: 10px;
+    background-image: url(../images/comillas2.png);
+    background-size: 80%;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: $primary;
+    font-size: 28px;
+  }
+
+  .imagen {
+    width: 100vw;
+    height: 250px;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: bottom center !important;
+    @include tablet {
+      height: 400px;
+      background-position: center !important;
+    }
+  }
+  .container {
+    margin-bottom: get-column-width(2, 31);
+    padding-top: get-column-width(1, 27);
+
+    .post {
+      width: get-column-width(37, 37);
+
+      @include desktop {
+        width: get-column-width(16, 27);
+        margin-right: get-column-width(2, 27);
+        float: left;
+      }
+
+      .textos {
+        .profile {
+          width: get-column-width(16, 16);
+          height: 50px;
+          margin-bottom: 20px;
+
+          @include desktop {
+            width: get-column-width(7, 16);
+          }
+          .img {
+            width: 50px;
+            height: 100%;
+            float: left;
+            border-radius: 50%;
+            margin-right: 20px;
+          }
+          p {
+            padding-top: 12.5px;
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
+      }
     }
-    
+    .aside {
+      width: get-column-width(37, 37);
+      min-height: 300px;
+      margin-top: 30px;
 
-   .wp-block-image{
+      @include tablet {
+        margin: 0px;
+        width: get-column-width(9, 27);
+        float: left;
+      }
 
-    figure{
-        img{
-            width: 100%; height: auto;
+      .noticia-referida {
+        height: 205px;
+        width: 100%;
+        position: relative;
+        background-size: cover !important;
+        background-size: center !important;
+        display: flex;
+        align-items: flex-end;
+        transition: ease-in-out 0.3s all;
+        margin-bottom: 50px;
+
+        p {
+          font-size: 25px;
+          text-align: center;
+          color: white;
+          width: 100%;
+          z-index: 9999;
+          position: relative;
+          margin-bottom: 20px;
+          font-weight: 900;
+          display: block;
+          width: 100%;
         }
-    }
-   }
-    .wp-block-quote{
-        display: block;
-        margin: 30px 0px;
-    }
-    .wp-block-quote p{
-
-        font-style: italic;
-        color:$grisOscuro;
-        font-size: 25px;
-        line-height: 130%;
-        font-weight: 300;
-    }
-    .wp-block-quote p::before{
-        content:"";
-        width:25px;
-        height: 25px;
-        display: inline-block;
-        font-weight: 300;
-        margin-right: 10px;
-        background-image: url(../images/comillas.png);
-        background-size: 80%;
-        background-position: top;
-        background-repeat: no-repeat;
-        color:$primary;
-        font-size: 28px;
-    }
-
-
-    .wp-block-quote p::after{
-        content:"";
-        width:25px;
-        height: 25px;
-        display: inline-block;
-        margin-left: 10px;
-        background-image: url(../images/comillas2.png);
-        background-size: 80%;
-        background-position: top;
-        background-repeat: no-repeat;
-        color:$primary;
-        font-size: 28px;
-    }
-
-    
-    .imagen{
-        width: 100vw;
-        height: 250px;
-        background-repeat:no-repeat!important;
-        background-size:cover!important;
-        background-position: bottom center!important;
-        @include tablet{
-        height: 400px;   
-        background-position:  center!important;
+        .btn-white {
+          padding: 10px 20px;
+          background: $primary;
+          color: white;
+          text-align: center;
+          display: none;
         }
-    }
-    .container{
-     
+        .overlay {
+          width: 100%;
+          height: 70px;
+          bottom: 0;
+          position: absolute;
+          left: 0;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+74 */
+          background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 74%, rgba(0, 0, 0, 0.65) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 74%, rgba(0, 0, 0, 0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 74%, rgba(0, 0, 0, 0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+        }
+        &:hover {
+          flex-flow: column;
+          justify-content: center;
+          .overlay {
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+          }
+          align-items: center;
+          .btn-white {
+            display: block;
+            max-width: 100px;
+            border-radius: 20px;
+            font-size: 16px;
+          }
+        }
+      }
 
-        margin-bottom:get-column-width(2,31) ;
-        padding-top: get-column-width(1,27);
+      .ultimasnoticias {
+        .noticia {
+          width: 100%;
+          height: 120px;
+          margin-bottom: 20px;
+          border: 1px solid $grisClaro;
 
-    
-        .post{
-            width:get-column-width(37,37);
-           
-
-            @include desktop{
-                width:get-column-width(16,27);
-                margin-right: get-column-width(2,27);;
-                float: left;
+          .image-noticia {
+            width: get-column-width(3, 8);
+            height: 100%;
+            padding: 10px;
+            float: left;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+          }
+          .texto-noticia {
+            float: left;
+            padding: 12px;
+            height: 100%;
+            width: get-column-width(5, 8);
+            p {
+              font-size: 16px;
+              font-weight: 120%;
             }
-
-            .textos{
-                .profile{
-                    width:get-column-width(16,16);
-                    height: 50px;
-                    margin-bottom: 20px;
-
-                    @include desktop{
-                        width:get-column-width(7,16);
-
-                    }
-                    .img{
-                        width: 50px; 
-                        height: 100%;
-                        float: left;
-                        border-radius: 50%;
-                        margin-right: 20px;
-                    }
-                    p{ padding-top: 12.5px;
-                        font-size: 16px;
-                        line-height: 24px;}
-                }
+            a {
+              font-weight: 900;
+              display: inline;
+              color: $grisOscuro;
+              transition: ease-in-out 0.3s all;
+              &:hover {
+                text-decoration: underline;
+                color: $primary;
+              }
             }
+          }
         }
-        .aside{
-            width:get-column-width(37,37);
-            min-height: 300px;
-            margin-top: 30px;
-            
-
-            @include tablet{
-                margin: 0px;
-                width:get-column-width(9,27);
-                float: left;
-            }
-
-
-            .noticia-referida{
-
-                height:205px;
-                width: 100%;
-                position: relative;
-                background-size:cover!important;
-                background-size: center!important;
-                display: flex;
-                align-items: flex-end;
-                transition: ease-in-out .3s all;
-                margin-bottom: 50px;
-        
-               
-        
-               p{ font-size: 25px;
-                  text-align: center;
-                  color:white;
-                  width: 100%;
-                  z-index:9999;
-                  position: relative;
-                  margin-bottom: 20px;
-                  font-weight: 900;
-                  display: block;
-                  width: 100%;
-        
-                }
-                .btn-white{
-                    padding: 10px 20px;
-                    background: $primary;
-                    color:white;
-                    text-align: center;
-                    display: none;
-                }
-                .overlay{
-                    width: 100%;
-                    height: 70px;
-                    bottom:0;
-                    position:absolute; 
-                    left: 0; 
-               /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+74 */
-background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 74%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
-        
-                }
-                &:hover{
-                    flex-flow: column;
-                    justify-content: center;
-                    .overlay{
-                        height: 100%;
-                        background:rgba(0,0,0,0.5);
-                    }
-                    align-items: center;
-                    .btn-white{
-                        display: block;
-                        max-width: 100px;
-                        border-radius: 20px;
-                        font-size: 16px;
-                    }
-                }
-                }
-
-                .ultimasnoticias{
-
-                    .noticia{
-                        width: 100%;
-                        height: 120px;
-                        margin-bottom: 20px;
-                        border: 1px solid $grisClaro;
-                        
-                        .image-noticia{
-                            width: get-column-width(3,8);
-                            height: 100%;
-                            padding: 10px;
-                            float: left;
-                            background-size: cover!important;
-                            background-position: center center!important;
-                            background-repeat: no-repeat!important;
-                        }
-                       .texto-noticia{
-                           float: left;
-                           padding: 12px;
-                           height: 100%;
-                            width: get-column-width(5,8);
-                            p{
-                            font-size: 16px;
-                            font-weight: 120%;
-                        }
-                        a{
-                            font-weight: 900;
-                            display: inline;
-                            color:$grisOscuro;
-                            transition: ease-in-out .3s all;
-                            &:hover{
-                                text-decoration: underline;
-                                color:$primary;
-                            }
-                        }
-                    }
-
-                    }
-                }
-        }
-    
+      }
     }
-
- 
-
+  }
 }
 
-.body-noticias{
-    width: 100%!important;
+.body-noticias {
+  width: 100% !important;
 }

@@ -26,8 +26,17 @@
 					<div class="texto-articulo" data-aos="fade-up" data-aos-offset="100"><?php the_content();?></div>
 				</div>
 			</div>
-
-			
-			</div></div>
+			</div>
+		</div>
 			<?php endwhile; ?>
+			<?php
+  while ( have_posts() ) { the_post();
+
+
+      the_modules_loop();
+
+
+
+  }
+  ?>
 <?php get_footer(); ?>
