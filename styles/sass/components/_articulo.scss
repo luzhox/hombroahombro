@@ -67,7 +67,19 @@
     font-size: 16px;
     text-align: justify;
     font-weight: 400;
-    color: #747474;
+
+    ul {
+      padding-left: 16px;
+      li {
+        font-weight: 300;
+        font-family: $primary-text;
+        color: $grisOscuro;
+        margin-bottom: 8px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
     h2 {
       font-size: 24px;
       line-height: 120%;
@@ -79,6 +91,11 @@
     }
     p {
       margin-bottom: 16px;
+      color: $grisOscuro;
+      font-family: $primary-text;
+      strong {
+        font-weight: 600;
+      }
       em {
         &::before {
           content: '“';
