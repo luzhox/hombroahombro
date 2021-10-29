@@ -1,79 +1,83 @@
 .values-hah {
-    margin-bottom: 44px;
-    &__container {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
+  margin-bottom: 44px;
+  &__container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 100%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-flow: wrap;
+    @include desktop {
+      width: col(10, 32);
+      margin-right: col(1, 37);
+      margin-bottom: 0px;
     }
-    &__item {
+    &__img {
+      width: 74px;
+      height: 74px;
+      margin-right: 8px;
+      img {
         width: 100%;
-        margin-bottom: 24px;
-        display: flex;
-        flex-flow: wrap;
-        @include desktop {
-            width: col(10, 32);
-            margin-right: col(1, 37);
-            margin-bottom: 0px;
-        }
-        &__img {
-            width: 74px;
-            height: 74px;
-            margin-right: 8px;
-            img {
-                width: 100%;
-                justify-self: auto;
-            }
-        }
-        &__content {
-            width: calc(100% - 82px);
-        }
-        &__value {
-            p {
-                font-size: 44px;
-                color: $primaryHover;
-                font-weight: 600;
-                line-height: 100%;
-                letter-spacing: -1px;
-                font-family: $primary-text;
-                text-align: left;
-                span {
-                    color: $primaryButton;
-                    font-weight: 600;
-                    font-family: $primary-text;
-                }
-                strong {
-                    font-weight: 600;
-                }
-            }
-        }
-        &__text {
-            margin-top: 12px;
-            p {
-                font-size: 18px;
-                line-height: 27px;
-                font-family: $primary-text;
-                text-align: left;
-                color: #0b0d23;
-            }
-        }
-        &:last-child {
-            margin-right: 0px;
-        }
+        justify-self: auto;
+      }
     }
-    &.pink {
-        background-color: $primaryButton;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        min-height: 240px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0px;
-        .values-hah__item__text p {
-            color: white;
-        }
-        .values-hah__item__value p,
-        .values-hah__item__value p span {
-            color: white;
-        }
+    &__content {
+      width: calc(100% - 82px);
     }
+    &__value {
+      p {
+        font-size: 44px;
+        color: $primaryHover;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: -1px;
+        font-family: $primary-text;
+        text-align: left;
+        span {
+          color: $primaryButton;
+          font-weight: 600;
+          font-family: $primary-text;
+        }
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+    &__text {
+      margin-top: 12px;
+      p {
+        font-size: 18px;
+        line-height: 27px;
+        font-family: $primary-text;
+        text-align: left;
+        color: #0b0d23;
+      }
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &.pink {
+    background-color: $primaryButton;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    .values-hah__item__text p {
+      color: white;
+    }
+    .values-hah__item__value p,
+    .values-hah__item__value p span {
+      color: white;
+    }
+  }
+  &.white-only {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
 }

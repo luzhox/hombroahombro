@@ -25,21 +25,33 @@
   }
   &__title {
     font-weight: 600;
-    font-size: 38px;
-    line-height: 57px;
+    font-size: 32px;
+    line-height: 120%;
     font-family: $primary-text;
     color: white;
-    width: col(15, 32);
-    margin-left: col(3, 32);
-    margin-right: col(3, 32);
+    text-align: center;
+    margin-bottom: 24px;
+    @include tablet {
+      width: col(15, 32);
+      margin-left: col(3, 32);
+      margin-right: col(3, 32);
+      font-weight: 600;
+      font-size: 38px;
+      line-height: 57px;
+      text-align: left;
+      margin-bottom: 0px;
+    }
   }
   &__form {
     font-family: $primary-text;
     color: white;
-    width: col(9, 32);
+
     background-color: white;
     border-radius: 10px;
     height: 59px;
+    @include tablet {
+      width: col(9, 32);
+    }
     .wpcf7 form {
       display: flex;
       align-items: center;

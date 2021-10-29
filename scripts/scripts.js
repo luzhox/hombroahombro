@@ -273,6 +273,17 @@ $('.slide-patronato.owl-carousel').owlCarousel({
   },
 })
 
+$('.team-carousel__content.owl-carousel').owlCarousel({
+  nav: false,
+  dots: false,
+  loop: true,
+  margin: 20,
+  items: 1,
+  autoWidth: false,
+  autoplay: true,
+  autoplayTimeout: 3000,
+})
+
 $(document).ready(function () {
   AOS.init()
 

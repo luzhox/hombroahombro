@@ -1,0 +1,28 @@
+.input-field-subs {
+  display: flex;
+  border: 1px solid #e62479;
+  border-radius: 7px;
+  max-width: 240px;
+  justify-content: space-between;
+  &__content {
+    padding: 4px 9px;
+    width: calc(100% - 55px);
+  }
+  &__field {
+    font-size: 12px;
+    line-height: 160%;
+    font-family: $primary-text;
+    color: $grisOscuro;
+    width: 100% !important;
+  }
+  &__btn {
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 100%;
+    color: white;
+    background: $primaryButton;
+    font-family: $primary-text;
+    border-radius: 5px;
+    padding: 8px;
+  }
+}

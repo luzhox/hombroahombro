@@ -1,0 +1,124 @@
+.obra-seccion {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+  .container {
+    display: flex;
+    flex-flow: wrap;
+  }
+  &__text {
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+    margin-bottom: 64px;
+    @include tablet {
+      width: col(10, 32);
+      padding-left: col(1, 32);
+      margin-left: col(1, 32);
+      padding-top: 80px;
+      margin-right: col(3, 32);
+      margin-bottom: 0px;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 190px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('/wp-content/uploads/2021/10/bg-light.png');
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 45px;
+      line-height: 120%;
+      font-family: $primary-text;
+      color: $grisOscuro;
+      text-align: center;
+      @include tablet {
+        text-align: left;
+      }
+    }
+    a {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      padding: 16px 24px;
+      font-family: $primary-text;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 144%;
+      letter-spacing: 0.336px;
+      text-transform: uppercase;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 32px;
+      text-align: center;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 200px;
+    background-size: cover !important;
+    background-position: center !important;
+    margin-bottom: 24px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 78px;
+      height: 78px;
+      position: absolute;
+      bottom: -39px;
+      left: -39px;
+      background-image: url('/wp-content/uploads/2021/10/light.png');
+      background-size: cover !important;
+      background-position: center !important;
+    }
+    @include tablet {
+      width: col(8.5, 32);
+      height: 380px;
+      margin-right: col(0.5, 32);
+      margin-bottom: 0px;
+    }
+  }
+  &__imgTwo {
+    width: 100%;
+    min-height: 200px;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    @include tablet {
+      width: col(8.5, 32);
+      margin-right: col(0.5, 32);
+      height: 380px;
+    }
+    &::before {
+      content: '';
+      width: 78px;
+      height: 78px;
+      position: absolute;
+      top: -39px;
+      right: -39px;
+      background-image: url('/wp-content/uploads/2021/10/light.png');
+      background-size: cover !important;
+      background-position: center !important;
+    }
+    &__item {
+      margin-bottom: col(2, 32);
+      height: 180px;
+      width: 100%;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

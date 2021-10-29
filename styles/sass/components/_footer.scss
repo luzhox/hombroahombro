@@ -3,7 +3,7 @@ footer.site-footer {
   color: $grisOscuro;
   padding: 20px 0px;
   display: block;
-
+  border-top: 1px solid rgb(215, 219, 238);
   clear: both;
   .container {
     min-height: 60px;
@@ -11,6 +11,10 @@ footer.site-footer {
     clear: both;
     padding: 0 get-column-width(2, 37);
     @include tablet {
+      display: flex;
+      flex-flow: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
       padding: 0 get-column-width(1, 31);
     }
 
@@ -93,9 +97,6 @@ footer.site-footer {
       max-width: 100%;
 
       @media only screen and (min-width: 700px) {
-        float: right;
-        max-width: 215px;
-
         width: get-column-width(7, 29);
         padding-top: 0px;
         align-items: flex-end;
@@ -117,24 +118,22 @@ footer.site-footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 20px;
         text-align: center;
         width: 100%;
-        max-width: 215px;
+        max-width: 250px;
         margin: 0 auto;
-        flex-flow: column;
+        flex-flow: wrap;
         span {
-          display: block;
+          display: inline-block;
         }
         .buttons {
-          display: block;
-          margin-top: 20px;
+          display: inline-block;
         }
         a {
           color: #fff;
           font-size: 25px;
-          margin-right: 8px;
-          padding-right: 5px;
+          margin-right: 0px;
+          padding-right: 0px;
 
           &:nth-child(2) {
             border: none;

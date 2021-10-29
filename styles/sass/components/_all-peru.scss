@@ -1,0 +1,53 @@
+.all-peru {
+  background: rgba(242, 245, 246, 1);
+  padding-top: 32px;
+  padding-bottom: 54px;
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    min-height: auto;
+  }
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+  }
+  &__img {
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    @include tablet {
+      width: col(15, 32);
+      margin-right: col(1, 32);
+      opacity: 1;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      width: col(15, 32);
+    }
+    h3 {
+      font-size: 32px;
+      line-height: 140%;
+      color: $grisOscuro;
+      font-family: $primary-text;
+      @include tablet {
+        font-size: 48px;
+      }
+      strong {
+        color: $primaryButton;
+        font-weight: 700;
+      }
+    }
+  }
+}

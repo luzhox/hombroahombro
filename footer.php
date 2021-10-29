@@ -8,22 +8,22 @@
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdzbZDz7wRwouGtRH2oPXn6bIl1AgwewRYrKNAom-jBtcY0kw/formResponse" method="POST" id="ss-form" target="hidden_iframe"  onsubmit="submitted=true;">
 <h4>Recibe nuestro boletín mensual:</h4>
-<div class="input-field">
-            <input type="text"  name="entry.1692126455" onfocus="abrirform(this)" onblur="cerrarform(this)" required="">
-            <label for="">Tu correo</label>
-          </div><input type="submit" value="ENVIAR" class="btn btn-red ">
-
-
+<div class="input-field-subs">
+  <div class="input-field-subs__content">
+      <input type="text" class="input-field-subs__field" placeholder="Tu correo" name="entry.1692126455"  required="">
+    </div>
+    <input type="submit" value="ENVIAR" class="input-field-subs__btn ">
+  </div>
 </form>
-
 </div>
-  
+
   <div class="redes-sociales">
   <div class="sociales">
-  <span>Búscanos en: </span>
-  <div class="buttons">
-  <a href="https://www.facebook.com/HombroaHombroPe/" class="icon-facebook" ></a
-  ><a href="https://twitter.com/HombroaHombroPe" class="icon-twitter" ></a><a href="https://www.youtube.com/channel/UCnh0tc240Ps5uj20HOxhSNA" style="margin-left:16px;"><img src="https://hombroahombro.org.pe/wp-content/uploads/2019/07/youtube-logo.png" height="25" width="auto"/></a></div>
+    <span>Búscanos en: </span>
+    <div class="buttons buttons__socials">
+      <a href="https://www.facebook.com/HombroaHombroPe/" class="icon-facebook" ><img width="44" src="/wp-content/uploads/2021/10/facebook.jpg" alt=""></a>
+      <a href="https://www.instagram.com/_hombroahombro_/" class="icon-twitter" ><img width="44" src="/wp-content/uploads/2021/10/instagram.jpg" alt=""></a>
+    </div>
   </div>
 </div>
 
@@ -71,13 +71,13 @@
             <span class="show-error"><b>!</b>Correo inválido</span>
           </div>
 
-          
+
           <input type="submit" value="ENVIAR" class="btn btn-primary ">
 
     </form>
 
     </div>
-    
+
 </div>
 </div> <!-- cierra el page -->
 

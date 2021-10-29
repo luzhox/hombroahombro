@@ -1,51 +1,49 @@
-#contactanos{
-    position: fixed;
-    right: 0;
-    width: 150px;
-    font-size: 16px;
-    padding: 10px;
-    top: 30%;
-    right: -108px;
-    border-radius: 8px 0px 0px 8px;
-    z-index: 999999999;
-    background: rgb(234,91,12);
-    color: #fff;
-    display:none;
-    transition: ease-in-out .3s all;
+#contactanos {
+  position: fixed;
+  right: 0;
+  width: 150px;
+  font-size: 16px;
+  padding: 10px;
+  top: 30%;
+  right: -108px;
+  border-radius: 8px 0px 0px 8px;
+  z-index: 999999999;
+  background: rgb(234, 91, 12);
+  color: #fff;
+  display: none;
+  transition: ease-in-out 0.3s all;
 
-    &:hover{
-        right: 0px;
+  &:hover {
+    right: 0px;
+  }
+  @include tablet {
+    display: flex;
+  }
+  cursor: pointer;
 
-    }
-    @include tablet{
-        display:block;
-
-    }
-    cursor: pointer;
-
-    a{
-        color: white;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    img{
-        height: 25px;
-        width: auto;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 7px;
-    }
+  a {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  img {
+    height: 25px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
 }
 
-.formulario-flotante{
-width: 100%;
-display: none;
-height: 100%;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 9999999999;
-.form{
+.formulario-flotante {
+  width: 100%;
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  .form {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -57,110 +55,104 @@ z-index: 9999999999;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    .btn-primary{
-        width: 100%;
-        background-color: rgb(234,91,12);
-        color: white;
-        max-width: 100%;
-        margin-top: 6px;
-        cursor: pointer;
+    .btn-primary {
+      width: 100%;
+      background-color: rgb(234, 91, 12);
+      color: white;
+      max-width: 100%;
+      margin-top: 6px;
+      cursor: pointer;
     }
-    @include tablet{
-        border-radius: 20px;
-        height: auto;
-        margin-top: 10%;
-        width: 80%;
-        flex-flow: row;
+    @include tablet {
+      border-radius: 20px;
+      height: auto;
+      margin-top: 10%;
+      width: 80%;
+      flex-flow: row;
     }
 
-    .texto{
-        width: get-column-width(29,29);
+    .texto {
+      width: get-column-width(29, 29);
+      text-align: left;
+      @include tablet {
+        width: get-column-width(16, 29);
+        margin-right: get-column-width(1, 29);
+      }
+      div.line {
+        margin: 10px 0;
+        background: rgb(234, 91, 12);
+      }
+      h2 {
         text-align: left;
-        @include tablet{
-            width: get-column-width(16,29);
-            margin-right: get-column-width(1,29);
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 120%;
 
+        @include tablet {
+          font-size: 20px;
         }
-        div.line{
-            margin: 10px 0;
-            background: rgb(234,91,12);
+      }
+    }
+    form {
+      width: get-column-width(29, 29);
+      .input-field {
+        width: 50%;
+      }
+      .mensaje {
+        margin-bottom: 10px;
+        width: 100%;
+        textarea {
+          height: 120px;
+          padding-right: 20px;
+          resize: none;
         }
-        h2{
-            text-align: left;
-            margin: 0;
-            margin-bottom: 20px;
-        }
-        p{
-            font-size: 16px;
-            line-height: 120%;
-
-            @include tablet{
-                font-size: 20px;
-
+      }
+      @include tablet {
+        .groupform {
+          display: flex;
+          .input-field {
+            &:nth-child(2) {
+              margin-left: 10px;
             }
+          }
         }
-       
+      }
+
+      .icon-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        color: rgb(234, 91, 12);
+      }
+      @include tablet {
+        width: get-column-width(12, 29);
+      }
     }
-    form{
-        width: get-column-width(29,29);
-        .input-field{
-            width: 50%;
-        }
-        .mensaje{
-            margin-bottom: 10px;
-            width: 100%;
-        textarea{height: 120px;
-            padding-right: 20px;
-            resize: none;
-        }}
-        @include tablet{
-            
-        .groupform{
-            display: flex;
-            .input-field{
-
-                &:nth-child(2){
-                    margin-left: 10px;;
-                }
-            }
-        }
-    }
-
-        .icon-close{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            color:rgb(234,91,12);
-        }
-        @include tablet{
-            width: get-column-width(12,29);
-
-        }
-      
-
-    }
-}
-.overlay-contacto{
+  }
+  .overlay-contacto {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     cursor: pointer;
     left: 0;
-    background-color:rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 99999999;
+  }
 }
-}
-.otrosdatos{
-    margin-bottom: 10px;
-    p{
-        font-size: 16px;
-        b{
-            font-weight: 600;
-            margin-top: 10px;
-            display: inline-block;
-            margin-bottom: 5px;
-        }
+.otrosdatos {
+  margin-bottom: 10px;
+  p {
+    font-size: 16px;
+    b {
+      font-weight: 600;
+      margin-top: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
     }
+  }
 }
