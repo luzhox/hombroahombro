@@ -2,8 +2,11 @@
   position: relative;
   &__video {
     width: 100%;
-    height: 390px;
+    height: 230px;
     position: relative;
+    @include tablet {
+      height: 500px;
+    }
     video {
       width: 100%;
       height: 100%;
@@ -15,7 +18,7 @@
   }
   &__overlay {
     width: 100%;
-    height: 390px;
+    height: 230px;
     position: absolute;
     left: 0;
     top: 0;
@@ -24,6 +27,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include tablet {
+      height: 500px;
+    }
     &__button {
       width: 76px;
       height: 76px;

@@ -1,7 +1,7 @@
 <div class="partner">
   <div class="container">
     <div class="partner__title"><?php the_sub_field('title')?></div>
-    <div class="partner__brands">
+    <div class="partner__brands owl-carousel owl-theme">
     <?php if (have_rows('partner')) {
                 while (have_rows('partner')) {
                     the_row(); ?>

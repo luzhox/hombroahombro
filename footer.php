@@ -21,8 +21,11 @@
   <div class="sociales">
     <span>Búscanos en: </span>
     <div class="buttons buttons__socials">
-      <a href="https://www.facebook.com/HombroaHombroPe/" class="icon-facebook" ><img width="44" src="/wp-content/uploads/2021/10/facebook.jpg" alt=""></a>
-      <a href="https://www.instagram.com/_hombroahombro_/" class="icon-twitter" ><img width="44" src="/wp-content/uploads/2021/10/instagram.jpg" alt=""></a>
+      <a href="https://www.facebook.com/HombroaHombroPe/" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/facebook-1.jpg" alt=""></a>
+      <a href="https://www.instagram.com/_hombroahombro_/" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/instagram.jpg" alt=""></a>
+      <a href="https://www.linkedin.com/company/hombro-a-hombro" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/linkedin.png" alt=""></a>
+      <a href="https://twitter.com/HombroaHombroPe" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/twitter.png" alt=""></a>
+
     </div>
   </div>
 </div>
@@ -41,9 +44,9 @@
             <p>Completa los campos del formulario y te compartiremos novedades de como donar</p>
             <div class="otrosdatos">
               <p><b>Encuéntranos en:</b></p>
-              <p>Av. El Derby 254, Piso 25, Surco, Lima.</p>
+              <p>Calle Los Laureles N° 365 - San Isidro</p>
               <p>Teléfono: (01) 710-6875</p>
-              <p>Cel: 989011849</p>
+              <p>Cel: +51 994 625 856</p>
             </div>
         </div>
     <form action="" >

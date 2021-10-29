@@ -1,15 +1,19 @@
 .float-modal {
-  width: 180px;
-  min-height: 200px;
+  width: 100%;
   position: fixed;
   right: 0;
   background-color: #fff;
-  border: 1px solid rgb(206, 208, 226);
   overflow: hidden;
-
-  top: 24%;
+  top: 74px;
   z-index: 9999;
-  border-radius: 16px 0px 0px 16px;
+
+  @include tablet {
+    top: 45%;
+    width: 180px;
+    border-radius: 16px 0px 0px 16px;
+    border: 1px solid rgb(206, 208, 226);
+    min-height: 200px;
+  }
   &__img {
     width: 100%;
     height: 100px;
@@ -18,6 +22,11 @@
   }
   &__text {
     padding: 24px;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      flex-flow: wrap;
+    }
     p {
       font-size: 14px;
       line-height: 1.5;
@@ -25,12 +34,18 @@
       a {
         color: white;
         display: inline-block;
-        padding: 12px 8px;
-        width: 100%;
+        padding: 8px 8px;
         background: $primaryButton;
         text-align: center;
-        margin-top: 16px;
+
         border-radius: 8px;
+        min-width: 110px;
+        @include tablet {
+          width: 100%;
+          padding: 12px 8px;
+          min-width: auto;
+          margin-top: 16px;
+        }
       }
     }
   }

@@ -31,10 +31,8 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      background-position: center bottom !important;
-
+      background-position: center 14px !important;
       background-attachment: fixed !important;
-
       overflow: hidden;
 
       @include tablet {
@@ -45,10 +43,10 @@
         flex-flow: column;
         justify-content: flex-end;
         align-items: flex-end;
+        background-position: center center !important;
       }
 
       @include desktop {
-        background-position: center center !important;
         background-size: cover !important;
         text-align: left;
       }

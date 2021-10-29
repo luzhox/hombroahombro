@@ -64,8 +64,9 @@
 					</a>
 				</div>
 				<div class="sandwich">
-
-					<a class="icon-menu" href="#"></a>
+					<div class="menu menu-1"></div>
+					<div class="menu menu-2"></div>
+					<div class="menu menu-3"></div>
 				</div>
 				<div class="container-nav">
 					<nav id="site-navegation" class="main-navegation" role="navegation">

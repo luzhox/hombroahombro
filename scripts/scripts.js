@@ -42,7 +42,7 @@ function observerEvents() {
     entries.forEach(function (entry) {
       if (entry.target === document.querySelector('.values-hah') && entry.intersectionRatio >= 0.5 && !localStorage.getItem('viewNumbers')) {
         localStorage.setItem('viewNumbers', true)
-        $('.values-gcp__item__value .number .count').each(function () {
+        $('.values-hah__item__value .number .count').each(function () {
           $(this)
             .prop('Counter', 0)
             .animate(
@@ -61,7 +61,7 @@ function observerEvents() {
       }
     })
   }
-  if (document.getElementsByClassName('our-group-carousel')[0]) {
+  if (document.getElementsByClassName('values-hah')[0]) {
     createObserver(document.getElementsByClassName('values-hah')[0])
   }
 }
@@ -70,9 +70,7 @@ $('.input-field').focusin(function (e) {
   $(this).addClass('active')
 })
 
-$('.vote').click(function () {
-  console.log('hola')
-})
+$('.vote').click(function () {})
 
 $('.input-field').focusout(function (e) {
   if ($(this).find('input').attr('value').length <= 0) {
@@ -150,9 +148,14 @@ window.addEventListener('scroll', function (e) {
   ticking = true
 })
 
+$('#contactanosnew').click(function () {
+  $('.formulario-flotante').fadeIn()
+})
+
 $('#contactanos').click(function () {
   $('.formulario-flotante').fadeIn()
 })
+Boolean
 
 $('#btn-hero-atencion').click(function () {
   $('.formulario-flotante').fadeIn()
@@ -216,6 +219,7 @@ $('.patronato__brands.owl-carousel').owlCarousel({
   items: 1,
   autoWidth: true,
   dots: false,
+  autoplay: true,
   responsive: {
     0: {
       items: 1,
@@ -229,6 +233,29 @@ $('.patronato__brands.owl-carousel').owlCarousel({
     },
   },
 })
+
+$('.partner__brands.owl-carousel').owlCarousel({
+  nav: true,
+  margin: 0,
+  items: 1,
+  autoWidth: true,
+  autoplay: true,
+  dots: false,
+  loop: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 4,
+      margin: 20,
+    },
+  },
+})
+
 $('.slide-directorio.owl-carousel').owlCarousel({
   nav: false,
   margin: 20,
@@ -274,7 +301,7 @@ $('.slide-patronato.owl-carousel').owlCarousel({
 })
 
 $('.team-carousel__content.owl-carousel').owlCarousel({
-  nav: false,
+  nav: true,
   dots: false,
   loop: true,
   margin: 20,
@@ -288,8 +315,16 @@ $(document).ready(function () {
   AOS.init()
 
   $('.sandwich').click(function () {
-    $('.sandwich a').toggleClass('icon-close icon-menu')
+    $('#masthead').toggleClass('active')
+    $('.sandwich').toggleClass('active')
     $('.container-nav').toggleClass('active')
+    if ($('.sandwich').hasClass('active')) {
+      var brandtwo = $('#brand').data('brandtwo')
+      $('#brand').attr('src', brandtwo)
+    } else {
+      var brand = $('#brand').data('brand')
+      $('#brand').attr('src', brand)
+    }
   })
 })
 

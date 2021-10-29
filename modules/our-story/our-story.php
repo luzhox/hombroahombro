@@ -2,7 +2,7 @@
 <div class="overlay"></div>
   <div class="container our-story__content">
     <div class="text">
-      <div class="our-story__title" data-aos="fade-up"><?php the_sub_field('title')?></div>
+      <!-- <div class="our-story__title" data-aos="fade-up"><?php the_sub_field('title')?></div> -->
       <?php if (have_rows('story')) {
               while (have_rows('story')) {
                   the_row(); ?>

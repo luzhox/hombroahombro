@@ -1,4 +1,4 @@
-<div id="contactanos"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contacto.png" alt=""><a >Contáctanos</a></div>
+<div id="contactanos" style="display:none;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/contacto.png" alt=""><a >Contáctanos</a></div>
 
 <div class="formulario-flotante">
     <div class="overlay-contacto"></div>
@@ -9,14 +9,14 @@
             <p>Completa los campos del formulario y pronto estaremos en contacto contigo.</p>
             <div class="otrosdatos">
               <p><b>Encuéntranos en:</b></p>
-              <p>Av. El Derby 254, Piso 25, Surco, Lima.</p>
-              <p>Teléfono: (01) 710-6875</p>
+               <p>Calle Los Laureles N° 365 - San Isidro</p>
+              <p>Cel: +51 994 625 856</p>
             </div>
         </div>
    		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='/';}"></iframe>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSerOJsi-145v_pTLbFpoecc2m1-ER4ChLFeBHcJ4ir4icgjMQ/formResponse" method="POST" id="ss-form" target="hidden_iframe"  onsubmit="submitted=true;">
-    <div id="cerrar" class="icon-close"></div>
+    <div id="cerrar" class="icon-close" style="font-family:'Poppins'; font-weight:700;"></div>
   <div class="groupform">
     <div class="input-field nombres">
             <input type="text"  name="entry.2045107730" onfocus="abrirform(this)" onblur="cerrarform(this)" required="">
@@ -53,6 +53,6 @@
     </form>
 
     </div>
-    
+
 </div>
 
