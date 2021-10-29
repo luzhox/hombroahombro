@@ -1,0 +1,47 @@
+.partner {
+  background-color: #fff;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 145px;
+  }
+  @include mobile {
+    .container {
+      padding-left: 0;
+      padding-right: 0px;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 160%;
+    font-family: $primary-text;
+    color: $grisOscuro;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    @include tablet {
+      font-size: 48px;
+      line-height: 160%;
+    }
+  }
+  &__brands {
+    width: col(27, 32);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    @include mobile {
+      overflow-x: scroll;
+    }
+  }
+  &__brand {
+    min-width: 222px;
+    margin-right: 32px;
+    border: 1px solid $grisClaro;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

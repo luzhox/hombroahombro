@@ -1,0 +1,64 @@
+.hero-desafio {
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: $grisOscuro;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+  }
+
+  h3,
+  h2 {
+    color: white;
+    text-align: left;
+
+    @include tablet {
+      max-width: 760px;
+      margin: 0;
+    }
+  }
+
+  h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 156%;
+      letter-spacing: 0.6px;
+    }
+  }
+
+  h2 {
+    line-height: 120%;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 44px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+    font-weight: 700;
+    font-family: 'Lato';
+    letter-spacing: 0.6px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,110 @@
+.zonadeperiodista {
+  height: 100%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 100%;
+  &__title {
+    font-size: 32px;
+    line-height: 160%;
+    font-family: $primary-text;
+    color: $grisOscuro;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    @include tablet {
+      font-size: 48px;
+      line-height: 160%;
+    }
+  }
+
+  .container {
+    padding: 0 col(1, 31);
+    margin: 0 auto;
+    .recurso {
+      width: col(29, 29);
+      float: left;
+      min-height: 268px;
+      border-radius: 20px;
+      border: 1px solid #ebebeb;
+      overflow: hidden;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      position: relative;
+
+      @include tablet {
+        width: col(9, 29);
+        margin-right: col(1, 29);
+        margin-bottom: col(1, 29);
+      }
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f464b+0,0f1a23+100&0+33,0.65+100 */
+        background: -moz-linear-gradient(top, rgba(63, 70, 75, 0) 0%, rgba(47, 55, 62, 0) 33%, rgba(15, 26, 35, 0.65) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(63, 70, 75, 0) 0%, rgba(47, 55, 62, 0) 33%, rgba(15, 26, 35, 0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(63, 70, 75, 0) 0%, rgba(47, 55, 62, 0) 33%, rgba(15, 26, 35, 0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003f464b', endColorstr='#a60f1a23',GradientType=0 ); /* IE6-9 */
+      }
+
+      .img {
+        height: 130px;
+      }
+      .text {
+        padding: 30px 20px;
+        position: relative;
+        z-index: 2;
+
+        span {
+          font-family: $primary-text;
+          font-size: 12px;
+          letter-spacing: -0.8px;
+          font-weight: 700;
+          color: white;
+        }
+        h3 {
+          font-family: $primary-text;
+          font-size: 24px;
+          letter-spacing: -0.8px;
+          font-weight: 700;
+          color: white;
+        }
+        a {
+          font-size: 12px;
+          font-family: $primary-text;
+          font-weight: 700;
+          padding: 7px 30px;
+          background-color: #3dce88;
+          margin-top: 12px;
+          display: inline-block;
+          color: white;
+          border-radius: 8px;
+          display: flex;
+          &::before {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5129 8.79173C16.2424 8.79173 16.0259 9.02093 16.0259 9.30744V13.9984C16.0259 15.2743 15.0446 16.3096 13.8432 16.3096H3.15683C1.95183 16.3096 0.974109 15.2705 0.974109 13.9984V9.23104C0.974109 8.94453 0.75764 8.71533 0.487054 8.71533C0.216469 8.71533 0 8.94453 0 9.23104V13.9984C0 15.8435 1.41787 17.341 3.15683 17.341H13.8432C15.5857 17.341 17 15.8397 17 13.9984V9.30744C17 9.02475 16.7835 8.79173 16.5129 8.79173Z' fill='white'/%3E%3Cpath d='M8.15745 13.2459C8.25125 13.3453 8.37753 13.3987 8.50019 13.3987C8.62286 13.3987 8.74913 13.3491 8.84293 13.2459L11.9384 9.96836C12.1296 9.7659 12.1296 9.44119 11.9384 9.23873C11.7472 9.03627 11.4406 9.03627 11.2493 9.23873L8.98725 11.6377V1.17464C8.98725 0.888138 8.77078 0.658936 8.50019 0.658936C8.22961 0.658936 8.01314 0.888138 8.01314 1.17464V11.6377L5.74743 9.23873C5.55622 9.03627 5.24956 9.03627 5.05834 9.23873C4.86713 9.44119 4.86713 9.7659 5.05834 9.96836L8.15745 13.2459Z' fill='white'/%3E%3C/svg%3E%0A");
+            width: 17px;
+            height: 18px;
+            display: block;
+            margin-right: 6px;
+          }
+          &:hover {
+            background-color: #43df94;
+          }
+        }
+      }
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}

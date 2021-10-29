@@ -1,0 +1,118 @@
+.story{
+
+    .container{
+
+        @include tablet{
+            padding: get-column-width(1,31) get-column-width(6,31);
+            position: relative;
+        }
+      
+.line-middle{
+    @include tablet{
+
+    
+    width: 1px;
+    background:lightgray;
+    height: 1880px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+}
+}
+        .story{
+            width: get-column-width(19,19);
+            margin-top: 20px;
+            border:1px solid lightgray;
+            border-radius: 8px;
+            margin-top:50px;
+            margin-bottom: 50px;
+         
+           
+            span{
+                color: #fff;
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 20px;
+                background: $primary;
+                width: 58px;
+                padding: 5px 10px;
+                border-radius: 20px;
+            }
+
+            @include tablet{
+                width: get-column-width(8,19);
+
+                float: left;
+                position: relative;
+            }
+            .img{
+                height: 206px;
+                background-size: cover!important;
+                background-position: center center!important;
+                background-repeat: no-repeat!important;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                padding: 20px;
+                border-bottom: 1px solid #ededed;
+                h3{
+                    color: white;
+                    font-size: 24px;
+                    letter-spacing: -0.2px;
+                    color: #FFFFFF;
+                }
+
+            }
+            .text{
+                p{
+                    line-height: 19px;
+                    font-size: 14px;
+                    padding: 20px;
+                }
+            }
+            &:nth-child(n){
+               @include tablet{
+                &::before{
+                    content: "";
+                    width: 74px;
+                    height: 26px;
+                    background: url(../images/pointer-left.png);
+                    position: absolute;
+                    top: 25%;
+                    background-size: cover;
+                    right: -74px;
+
+                }
+
+               }
+                
+            }
+
+            &:nth-child(2n){
+                @include tablet{
+                    float: right;
+                    margin-top: 0px;
+                    margin-left: 60px;
+    
+                    &::before{
+                    content:'';
+                     width: 74px;
+                     height: 26px;   
+                     left: -74px;
+                     position: absolute;
+                     background:url(../images/pointer-right.png);
+                     background-size: cover;
+    
+    
+                    }
+
+                }
+               
+            }
+        }
+    }
+}

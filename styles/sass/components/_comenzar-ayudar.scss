@@ -1,0 +1,120 @@
+.comenzar-ayudar{
+    padding-top: 20px;
+    @include tablet{
+        padding-top: 40px;
+
+    }
+    .container{
+        display: flex;
+        flex-flow: column;
+        @include tablet{
+            flex-flow: row;
+
+        }
+        form{
+            width: get-column-width(29,29);
+
+            @include tablet{
+                width: get-column-width(12,29);
+                margin-right:get-column-width(1,29) ;
+            }
+        
+            h2{
+           
+                letter-spacing: -0.2px;
+                color:$gris;
+                font-weight: 600;
+                padding-bottom: 0px;
+            
+                font-size: 24px;
+                @include tablet{
+                    margin-top: 40px;
+                    text-align: left;
+                    font-size: 30px;
+                }
+
+            }
+            p{
+                text-align: center;
+                font-weight: 300;
+                letter-spacing: -0.2px;
+                margin-bottom: get-column-width(1,29);
+
+                @include tablet{
+                    text-align: left;
+                    font-size: 22px;
+
+                }
+
+
+            }
+            .group{
+                width: 100%;
+             
+                @include tablet{
+                    display: flex;
+                    flex-flow: wrap;
+                }
+                .input-field{
+                    width: get-column-width(12,12);
+
+                    @include tablet{
+                        width: get-column-width(6,12);
+
+                    }
+                }
+
+                .nombre , .celular{
+                    @include tablet{
+                    
+                    width: get-column-width(5.7,12);
+                    margin-right:get-column-width(0.25,12); 
+                        
+                }
+
+                }
+            }
+
+            .mensaje{
+                
+                textarea{resize: none;
+                height: 120px;}
+            }
+            .btn-primary{
+                width: get-column-width(13,13);
+                background-color: $primary;
+                color: white;
+                cursor: pointer;
+                margin-top: 10px;
+                @include tablet{
+                    margin-top: 5px;
+                    margin-bottom: 40px;
+
+
+                }
+
+                &:hover{
+                    background-color:#e62479;
+                }
+            }
+
+
+        }
+        div.imagen{
+            width: get-column-width(29,29);
+            height: 220px;
+            background-size: 102% !important;
+            background-repeat: no-repeat !important;
+            background-position: CENTER center;
+            margin-top: 20px;
+            @include tablet{
+                margin-top: 0px;
+                width: get-column-width(16,29);
+                height: 510px;
+                background-position: CENTER 70px!important;
+
+ 
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.infografia{
+    margin-bottom: get-column-width(1.5,29);
+    padding: 40px 0px;
+
+    @include tablet{
+        padding: 0px 0px;
+
+    }
+
+    h2.title{
+        padding-bottom: 0px;
+        margin-bottom: 30px;
+    }
+    div.container{
+        div.img{
+            width: get-column-width(29,29);
+            margin:0 auto;
+            height: 200px;
+            background-color:gray;
+            border-radius: 10px;
+            overflow: hidden;
+            overflow: hidden;
+            position: relative;
+            @include tablet{
+                width: get-column-width(15,29);
+                height: 300px;
+
+            }
+            img{
+                width:100%;
+                height: auto;
+            }
+        }
+    }
+}

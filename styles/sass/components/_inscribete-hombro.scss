@@ -1,0 +1,180 @@
+.incripcion-hombro {
+
+  position: relative;
+
+  @include tablet {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &__header {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+
+    .container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      img {
+        height: 86px;
+        width: auto;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 24px;
+        font-family: 'Lato', sans-serif;
+      }
+    }
+  }
+
+  &__content {
+    min-height: calc(100vh - 130px);
+    display: flex;
+    overflow: hidden;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-flow: wrap;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @include tablet {
+      width: get-column-width(12, 27);
+      margin-right: get-column-width(6, 27);
+    }
+
+    .img {
+      width: get-column-width(31, 31);
+      background-color: #232528;
+      min-height: calc(40vh);
+      left: 0;
+      overflow: hidden;
+      background-size: cover !important;
+      background-position: center top !important;
+      position: absolute;
+
+      @include tablet {
+        width: get-column-width(17, 31);
+        transform: rotate(-4deg);
+        left: -40px;
+        top: 100px;
+        position: absolute;
+        min-height: calc(100vh - 50px);
+      }
+    }
+
+    .text {
+      position: relative;
+      z-index: 3;
+
+      h3 {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 120%;
+        color: white;
+        font-family: 'Lato', sans-serif;
+
+
+        @include tablet {
+          font-size: 40px;
+          margin-top: 0px;
+        }
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      a {
+        color: white;
+        font-size: 16px;
+        line-height: 120%;
+        font-family: 'Lato', sans-serif;
+        vertical-align: middle;
+        height: 25px;
+        display: block;
+        margin-bottom: 24px;
+        margin-top: 40px;
+
+        @include tablet {
+          margin-top: 0;
+          font-size: 16px;
+        }
+
+        span {
+          width: 25px;
+          height: 25px;
+          border: 1px solid #D4035E;
+          border-radius: 50%;
+          display: inline-block;
+          background-image: url("data:image/svg+xml,%3Csvg width='7' height='11' viewBox='0 0 7 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.18397 10.1198L5.18379 10.1197L0.880493 5.81637L0.880471 5.81635C0.706498 5.64234 0.706528 5.36028 0.88045 5.18627L0.880493 5.18623L5.18257 0.884152C5.35373 0.70898 5.63442 0.704746 5.81081 0.875056L5.81085 0.875098C5.98786 1.04608 5.99272 1.32814 5.82181 1.50515L5.82175 1.50521L5.81391 1.51305L5.81394 1.51308L1.82591 5.5011L5.81409 9.48891L5.81431 9.48914L5.63754 9.66592C5.71403 9.74221 5.71418 9.86606 5.63789 9.94255L5.18397 10.1198ZM5.18397 10.1198C5.26763 10.2033 5.38099 10.2501 5.49906 10.25M5.18397 10.1198L5.49906 10.25M5.49906 10.25C5.49891 10.25 5.49876 10.25 5.49862 10.25L5.49906 10L5.4995 10.25C5.49935 10.25 5.4992 10.25 5.49906 10.25Z' fill='white' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center center;
+          vertical-align: middle;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: get-column-width(27, 27);
+    margin-top: 120px;
+    padding-bottom: 24px;
+
+    @include tablet {
+      width: get-column-width(8, 27);
+      padding-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    .btn-red {
+      padding: 16px 32px;
+      display: inline-block;
+      width: auto;
+      margin-top: 16px;
+      min-width: auto;
+      border: 0px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+
+      @include tablet {
+        width: auto;
+      }
+    }
+
+    input {
+      border: 1px solid lightgray;
+      padding: 16px;
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.hero-image{
+    height: calc(90vh - 100px);
+        max-height: 350px;
+        background-size: cover !important;
+        width: 100vw;
+
+        @include tablet {
+            height: calc(90vh - 70px);
+            max-height: 100%;
+            margin-top: 0px;
+        }
+
+        @include desktop {
+            background-position: center bottom !important;
+            text-align: left;
+        }
+}

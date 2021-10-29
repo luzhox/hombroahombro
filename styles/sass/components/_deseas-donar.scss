@@ -1,0 +1,76 @@
+.suscribir-donar{
+padding: 60px 0px;
+background: #2c3236;
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+
+        h2{
+            color:white;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .line{
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        p{
+            color:white;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: -0.2px;
+            margin-bottom: 10px;
+
+        }
+
+        form{
+            width: get-column-width(29,29);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            flex-flow: column;
+            
+            @include tablet{
+                flex-flow: wrap;
+                width: get-column-width(13,29);
+
+            }
+            .input-field{
+                width: get-column-width(13,13);
+                @include tablet{
+                    width: get-column-width(8.5,13);
+  
+                }
+                input{background:white;
+                
+                }
+                label{
+                    z-index: 9999;
+                }
+            }
+            .btn-primary{
+                width: get-column-width(13,13);
+                background-color: $primary;
+                height: 64px;
+                color: white;
+                cursor: pointer;
+                margin-top: 10px;
+                @include tablet{
+                    margin-top: 0px;
+                    margin-left: get-column-width(.5,13);
+
+                    width: get-column-width(4,13);;
+
+                }
+
+                &:hover{
+                    background-color:#e62479;
+                }
+            }
+
+        }
+    }
+}

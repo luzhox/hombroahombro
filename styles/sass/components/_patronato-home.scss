@@ -1,0 +1,97 @@
+.patronato {
+  background: #f2f5f6;
+  padding-top: 64px;
+  padding-bottom: 120px;
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 145px;
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 160%;
+    font-family: $primary-text;
+    color: $grisOscuro;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    @include tablet {
+      font-size: 48px;
+      line-height: 160%;
+    }
+  }
+  &__brands {
+    .owl-nav {
+      right: 10px !important;
+      top: 0px;
+      bottom: inherit !important;
+      @include mobile {
+        position: relative;
+        top: 90%;
+      }
+      .owl-prev {
+        -webkit-appearance: none;
+        appearance: none;
+        border: 0px;
+        box-shadow: none;
+        outline: 0px;
+        &:hover {
+          background: transparent !important;
+        }
+        @include tablet {
+          position: absolute;
+          left: -40px;
+          top: 20%;
+          z-index: 5;
+        }
+        span {
+          font-size: 60px;
+          color: $primaryButton;
+          background: transparent;
+          &:hover {
+            background: transparent;
+          }
+        }
+        &.disabled {
+          span {
+            color: #888888;
+          }
+        }
+      }
+      .owl-next {
+        -webkit-appearance: none;
+        appearance: none;
+        border: 0px;
+        box-shadow: none;
+        outline: 0px;
+        &:hover {
+          background: transparent !important;
+        }
+        @include tablet {
+          position: absolute;
+          right: -40px;
+          top: 20%;
+          z-index: 5;
+        }
+        span {
+          font-size: 60px;
+          color: $primaryButton;
+          background: transparent;
+          &:hover {
+            background: transparent;
+          }
+        }
+        &.disabled {
+          span {
+            color: #888888;
+          }
+        }
+      }
+    }
+  }
+  &__brand {
+    width: 242px;
+    height: 134px;
+    background: white;
+    margin-right: 24px;
+  }
+}

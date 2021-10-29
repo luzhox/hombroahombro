@@ -1,0 +1,100 @@
+.overlay-video{
+    position: absolute;
+    width: 100%;
+    background-color:rgba(0,0,0,0.5);
+    background-image:url(../images/play-button.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 95px;
+    height: 100%;
+    left: 0;
+    top:0;
+    z-index: 2;
+}
+
+.seccion-video{
+    background-color:#aeb9d82c;
+    min-height: 400px;
+    padding-top: get-column-width(2,37);
+    padding-bottom: get-column-width(2,37);
+
+    @include tablet{
+        padding-top: get-column-width(0,37);
+        padding-bottom: get-column-width(0,37);
+     
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+
+        flex-flow: column;
+        @include tablet{
+            flex-flow: row;
+        }
+        .texto{
+            width: get-column-width(29,29);
+            text-align: center;
+            @include tablet{
+                text-align: left;
+                width: get-column-width(13,29);
+                margin-right: get-column-width(3,29);
+            }
+           
+            p{
+                font-size: 18px;
+                font-family: $primary-text;
+                font-weight: 300;
+                line-height: 120%;
+                @include tablet{
+                    font-size: 26px;
+
+                }
+            }
+
+            b{
+                font-weight: 700;
+            }
+        }
+        
+        .video{
+            width: get-column-width(29,29);
+            height: 200px;
+            background-size: cover!important;
+            background-position: center!important;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            margin-top:get-column-width(2,29);
+            @include tablet{
+                width: get-column-width(13,29);
+                margin-top:0px;
+                height: 290px;
+
+
+            }
+        
+            a{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 30;
+                display: block;
+
+            }
+            }
+            #video-pop{
+                display: none;
+                width: 100%;
+                height: auto;
+
+                video{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        
+    }
+}

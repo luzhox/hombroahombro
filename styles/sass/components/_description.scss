@@ -1,0 +1,27 @@
+.description{
+    .container{
+        margin-bottom:get_column_width(1,27);
+
+    }
+    h3{
+        display: block;
+        margin:get_column_width(1,27) 0px;
+        font-size: 24px;
+    }
+    ul{
+        padding: 20px;
+        li{
+            line-height: 130%;
+        }
+    }
+    img{
+        width:100%;
+        border:1px solid $primary;
+        height: auto;;
+        
+    }
+}
+
+#menu-item-949 .sub-menu{
+    left: 0px;
+}

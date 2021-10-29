@@ -1,0 +1,105 @@
+.porque-me-importa{
+    position: relative;
+    min-height: 408px;
+   background-color:#F5F7FA;
+   display: flex;
+   align-items: center;
+   clear: both;
+   padding: 60px 0;
+
+   @include tablet{
+       padding: 60px 0;
+
+   }
+    .container{
+        padding: 0 get-column-width(2, 37);
+        display: flex;
+        flex-flow: column-reverse;
+        
+
+
+
+        @include tablet{
+            padding: 0 get-column-width(1, 31);
+        flex-flow: wrap;
+        align-items: center;
+
+        }
+        .contenido{
+            width: get-column-width(29,29);
+            padding: get-column-width(2, 31) 0;
+            position: relative;
+            z-index: 2;
+            vertical-align: middle;
+            @include tablet{
+                width: get-column-width(12,29);
+                margin-right: get-column-width(3,29);
+                padding: 0;
+
+
+
+            }
+            .btn-red{
+                margin-top:30px;
+                cursor: pointer;
+            }
+            .title{
+                width: 100%;
+                max-width: 100%;;
+                text-align: center;
+                margin-left:0px;
+                text-decoration: none;
+                border: 0px;
+                margin: 0px;
+                padding: 0;
+                @include tablet{
+                    text-align: left;
+
+                }
+            }
+            .line{
+                height: 4px;
+                width: 80px;
+                background-color:$primary;
+                margin: 30px auto;
+
+                @include tablet{
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+            }
+            p{
+                font-family: $secondary-text;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: -0.2px;
+                text-align: center;
+                @include tablet{
+                    font-size: 24px;
+                    line-height: 34px;
+                    text-align: left;
+
+
+                }
+            }
+        }
+        .img{
+            width: get-column-width(29,29);
+            height: 200px;
+            vertical-align: middle;
+            background-size: cover!important;
+            background-position:center!important;
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            @include tablet{
+                width: get-column-width(14,29);
+                height: 332px;
+                margin-bottom: 0px;
+
+ 
+            }
+        }
+    }
+}

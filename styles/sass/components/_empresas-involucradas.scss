@@ -1,0 +1,84 @@
+.empresas{
+    padding: get-column-width(2,31);
+    .container{
+        .title{
+            max-width: 520px;
+            margin: 0 auto;
+            text-decoration: none;
+            border: 0px;
+            margin-bottom:0px;
+            font-weight: 400;
+
+        }
+        .line{
+            width:80px;
+            height: 4px;
+            background:$primary;
+            margin: 20px auto;
+            margin-top: 0px;
+        }
+        div.contenedor-directorio{
+            text-align: center;
+            margin-bottom:get-column-width(1,29);
+            h4{
+                text-align: center;
+                margin:0 auto;
+                margin-bottom: 20px;
+                font-family: $primary-text;
+                font-size: 18px;
+                letter-spacing: -0.8px;
+                margin-top:50px;
+
+            }
+            div.slide-directorio{
+                max-width: get-column-width(21,29);
+                margin: 0 auto;
+                display: flex;
+                flex-flow: wrap;
+                align-items: center;
+                justify-content: center;
+                .slide{
+
+                    img{
+                        height: auto;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+        div.contenedor-patronato{
+            text-align: center;
+            h4{
+                text-align: center;
+                margin:0 auto;
+                margin-bottom: 20px;
+                font-family: $primary-text;
+                font-size: 18px;
+                letter-spacing: -0.8px;
+                margin-top:50px;
+
+            }
+            div.slide-patronato{
+                max-width: get-column-width(18,29);
+                margin: 0 auto;
+                display: flex;
+                flex-flow: wrap;
+                align-items: center;
+                justify-content: center;
+
+                .slide{
+
+                    img{
+                        height: 64px;
+                        width: auto;
+                    }
+                }
+
+            }
+        }
+      
+    }
+}
