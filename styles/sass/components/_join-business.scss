@@ -23,6 +23,7 @@
     z-index: 2;
     align-items: center;
   }
+
   &__title {
     font-weight: 600;
     font-size: 32px;
@@ -49,6 +50,9 @@
     background-color: white;
     border-radius: 10px;
     height: 59px;
+    .wpcf7 form.sent .wpcf7-response-output {
+      display: none !important;
+    }
     @include tablet {
       width: col(9, 32);
     }

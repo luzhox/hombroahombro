@@ -30,7 +30,6 @@
     @include tablet {
       width: col(6, 32);
       margin-right: col(2, 32);
-      margin-bottom: 0px;
     }
     &:last-child {
       margin-right: 0;
@@ -89,6 +88,14 @@
         }
         a {
           opacity: 1;
+        }
+      }
+      &.not-hover {
+        &::before {
+          opacity: 0;
+        }
+        a {
+          opacity: 0;
         }
       }
     }

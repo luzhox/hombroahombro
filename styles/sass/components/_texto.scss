@@ -1,0 +1,53 @@
+.texto-hah {
+  .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  ul {
+    padding-left: 16px;
+    li {
+      font-weight: 300;
+      font-family: $primary-text;
+      color: $grisOscuro;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &::before {
+      display: none;
+    }
+  }
+  p {
+    margin-bottom: 16px;
+    color: $grisOscuro;
+    font-size: 18px;
+    font-family: $primary-text;
+    strong {
+      font-weight: 600;
+    }
+    em {
+      &::before {
+        content: '“';
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 32px;
+        font-weight: 600;
+        color: $primaryButton;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: $primaryButton;
+      font-weight: 700;
+    }
+  }
+}

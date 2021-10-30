@@ -1,152 +1,267 @@
 .desafio-hombro {
   .container {
     margin-top: 48px;
-
-    @include tablet {
-      margin-top: 64px;
-    }
-
     h2 {
       font-size: 28px;
       line-height: 130%;
       text-align: left;
       margin-bottom: 32px;
-
-      @include tablet {
-        font-size: 44px;
-      }
-
       strong {
         font-weight: 700;
-        font-family: 'Lato', sans-serif;
+        font-family: $primary-text;
       }
     }
   }
-
-  &-module {
-
-    &__buttons {
-      border-bottom: 1.12px solid #D7D7D7;
-      margin-bottom: 44px;
-
-      &__container {
-        button {
-          -webkit-appearance: none;
-          appearance: none;
-          font-size: 14px;
-          letter-spacing: 0.6px;
-          line-height: 23px;
-          color: #2E3340;
-          margin-right: 32px;
-          background-color: transparent;
-          padding-bottom: 12px;
-          font-family: 'Lato', sans-serif;
-          cursor: pointer;
-
-          @include tablet {
-            font-size: 16px;
-          }
-
-          &.active {
-            color: #d4035e;
-            font-weight: 700;
-            border-bottom: 2px solid #d4035e;
-          }
-        }
+}
+.desafio-hombro-module__buttons {
+  border-bottom: 1.12px solid #d7d7d7;
+  margin-bottom: 44px;
+}
+.desafio-hombro-module__buttons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    line-height: 23px;
+    color: #2e3340;
+    margin-right: 32px;
+    background-color: transparent;
+    padding-bottom: 12px;
+    font-family: $primary-text;
+    cursor: pointer;
+  }
+  button.active {
+    color: #d4035e;
+    font-weight: 700;
+    border-bottom: 2px solid #d4035e;
+  }
+}
+.desafio-hombro-module__content {
+  min-height: 270px;
+}
+.desafio-hombro-module__content__link {
+  width: 100%;
+  height: 100%;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: none;
+  .col_one {
+    p {
+      font-size: 14px;
+      line-height: 160%;
+      font-family: $primary-text;
+      color: #2e3340;
+      font-weight: 400;
+      text-align: justify;
+      strong {
+        color: #d4035e;
+        font-weight: 700;
       }
-
-
-
     }
-
-    &__content {
-      min-height: 270px;
-
-      &__link {
+  }
+  .col_one__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    h3 {
+      font-size: 44px;
+      line-height: 160%;
+      font-weight: 700;
+      font-family: $primary-text;
+      color: #d4035e;
+      margin-right: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .col_one__item__text {
+    strong {
+      display: block;
+      font-size: 28px;
+      line-height: 160%;
+      color: #d4035e;
+      font-weight: 700;
+      margin-top: 24px;
+      span {
+        font-size: 36px;
+        font-weight: 700;
+      }
+    }
+  }
+  .col_two {
+    margin-top: 24px;
+    .video-reto {
+      position: relative;
+      overflow: hidden;
+      video {
         width: 100%;
-        height: 100%;
-
-        flex-flow: wrap;
-        align-items: center;
-        display: none;
-
-        .col {
-
-          &_one {
-
-            @include tablet {
-              width: get-column-width(13, 27);
-              margin-right: get-column-width(1, 27);
-            }
-
-            p {
-              font-size: 16px;
-              line-height: 160%;
-              font-family: 'Lato', sans-serif;
-              color: #2E3340;
-              font-weight: 400;
-
-              @include tablet {
-                font-size: 24px;
-              }
-
-              strong {
-                color: #d4035e;
-                font-weight: 700;
-              }
-            }
-
-            &__item {
-              display: flex;
-              align-items: center;
-
-              h3 {
-                font-size: 44px;
-                line-height: 160%;
-                font-weight: 700;
-                font-family: 'Lato', sans-serif;
-                color: #d4035e;
-                margin-right: 16px;
-              }
-
-              p {
-                font-size: 20px;
-              }
-
-              &__text {
-                strong {
-                  display: block;
-                  font-size: 28px;
-                  line-height: 160%;
-                  color: #d4035e;
-                  font-weight: 700;
-                  margin-top: 24px;
-                }
-              }
-            }
-          }
-
-          &_two {
-            margin-top: 24px;
-
-            @include tablet {
-              width: get-column-width(13, 27);
-              margin-top: 0px;
-            }
-
-            img {
-              width: 100%;
-              height: auto;
-              border-radius: 24px;
-            }
-          }
-        }
-
-        &.active {
-          display: flex;
+        height: 240px;
+        border-radius: 24px;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+    }
+  }
+  .col_three {
+    width: 100%;
+    margin-right: 16px;
+    text-align: center;
+    margin-bottom: 24px;
+    h4 {
+      font-size: 18px;
+      color: #d4035e;
+      font-weight: 700;
+    }
+    p {
+      font-size: 16px;
+      max-width: 60%;
+      line-height: 24px;
+      margin: 0 auto;
+      margin-top: 8px;
+      a {
+        color: #d4035e;
+        font-weight: 700;
+        &:hover {
+          text-decoration: underline;
         }
       }
-
+    }
+    .btn-red {
+      margin-top: 12px;
+      padding: 16px 8px;
+      display: inline-block;
+      width: auto;
+      font-weight: 700;
+    }
+  }
+  .col_four {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+    h4 {
+      font-size: 18px;
+      color: #d4035e;
+      font-weight: 700;
+    }
+    p {
+      font-size: 14px;
+      max-width: 90%;
+      line-height: 24px;
+      margin-top: 8px;
+      strong {
+        font-weight: 700;
+        color: #222228;
+      }
+      a {
+        color: #d4035e;
+        font-weight: 700;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .btn-red {
+      margin-top: 12px;
+      padding: 16px 24px;
+      display: inline-block;
+      width: auto;
+      font-weight: 700;
+    }
+  }
+}
+.desafio-hombro-module__content__link.align-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.desafio-hombro-module__content__link.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (min-width: 745px) {
+  .desafio-hombro {
+    .container {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      h2 {
+        font-size: 44px;
+      }
+    }
+  }
+  .desafio-hombro-module__buttons__container {
+    button {
+      font-size: 16px;
+    }
+  }
+  .desafio-hombro-module__content__link {
+    .col_one {
+      width: 48.14815%;
+      margin-right: 3.7037%;
+      p {
+        font-size: 16px;
+        text-align: justify;
+      }
+    }
+    .col_two {
+      .video-reto {
+        padding-bottom: 56.25%;
+        video {
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      width: 48.14815%;
+      margin-top: 0px;
+    }
+    .col_three {
+      width: 31.92%;
+    }
+    .col_four {
+      width: 100%;
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 744px) {
+  .desafio-hombro-module__buttons__container {
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    button {
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      margin-right: 0px;
+      width: 44%;
+      &:nth-child(2n) {
+        margin-left: 32px;
+      }
+    }
+  }
+  .desafio-hombro-module__content__link {
+    .col_two {
+      width: 100%;
     }
   }
 }

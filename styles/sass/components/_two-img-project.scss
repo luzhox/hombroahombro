@@ -1,0 +1,29 @@
+.two-img-project {
+  display: flex;
+  flex-flow: wrap;
+
+  &__item {
+    min-height: 240px;
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+
+      min-height: 500px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    background-size: cover !important;
+    background-position: center !important;
+
+    &:last-child {
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}

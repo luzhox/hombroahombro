@@ -1,0 +1,63 @@
+.description-project {
+  background: #1a1a20;
+
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    min-height: 290px;
+
+    @include mobile {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+
+  &__separator {
+    @include tablet {
+      width: 1px;
+      height: 97px;
+      background-color: #a72545;
+      margin-right: col(1.4, 37);
+    }
+  }
+
+  &__title {
+    @include tablet {
+      width: col(16, 37);
+      margin-right: col(1.4, 37);
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: white;
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 16px;
+
+      @include tablet {
+        font-size: 52px;
+        line-height: 63px;
+      }
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  &__text {
+    @include tablet {
+      width: col(18, 37);
+    }
+
+    p {
+      color: white;
+      font-size: 16px;
+      line-height: 140%;
+      font-family: $primary-text;
+    }
+  }
+}

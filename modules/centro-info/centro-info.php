@@ -7,7 +7,7 @@
                     the_row();  ?>
       <div class="centro-info__item" >
                   <div class="centro-info__item__content" style="background:url(<?php the_sub_field('urlImage')?>)">
-                      <a class="centro-info__button" href="<?php the_sub_field('url')?>">VER MÁS</a>
+                      <a class="centro-info__button" href="<?php the_sub_field('url')?>">IR A WEB</a>
                   </div>
                   <div class="centro-info__item__title"><?php the_sub_field('name')?></div>
       </div>
