@@ -11,7 +11,7 @@
 
         <div class="botones">
             <a href="<?php the_sub_field('url_del_boton_video')?>" class="btn btn-red video-preview"><?php the_sub_field('texto_del_boton_video')?></a>
-            <a href="<?php the_sub_field('url_del_boton')?>" class="btn btn-white"><?php the_sub_field('texto_del_boton')?></a>
+            <a id="btnPrep" href="<?php the_sub_field('url_del_boton')?>" class="btn btn-white"><?php the_sub_field('texto_del_boton')?></a>
 
         </div>
 
@@ -31,7 +31,11 @@
 $ = jQuery.noConflict();
 
 
-
+	document.addEventListener('DOMContentLoaded',function(){
+			  if (window.matchMedia('(max-width: 768px)').matches) {
+		  $('#btnPrep').attr('href','http://preparatevoluntario.hombroahombro.org.pe/login')
+	  }
+	})
     $(".video-preview").colorbox({iframe:true, transition:"fade",width:'80%', height:'90%'});
 
 </script>

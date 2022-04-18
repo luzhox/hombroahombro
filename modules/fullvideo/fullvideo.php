@@ -7,7 +7,7 @@
     </button>
   </div>
   <div class="fullvideo__video">
-        <video class="fullvideo__video-player" data-url="<?php the_sub_field('videoPoster') ?>" poster="<?php the_sub_field('videoPoster') ?>" pause loop muted playsinline>
+        <video class="fullvideo__video-player" data-url="<?php the_sub_field('videoPoster') ?>" poster="<?php the_sub_field('videoPoster') ?>" pause loop playsinline>
               <source src="<?php the_sub_field('videoUrl') ?>" type="video/mp4">
         </video>
   </div>
@@ -15,21 +15,18 @@
 
 <script >
 document.addEventListener('DOMContentLoaded',function(){
-  const video = $('.fullvideo__video-player');
+  const video = $(this).parent().siblings().find('.fullvideo__video-player');
   const videoCont= $('.fullvideo__video')
   const videoButton = $('.fullvideo__overlay__button');
-  const videoButtonOverlay = $('.fullvideo__overlay');
+  const videoButtonOverlay = $(this).parent();
 
-  console.log(video,videoButton);
   videoButton.click(function(){
-    video.trigger('play');
-    videoButton.fadeOut();
-    videoButtonOverlay.fadeOut();
+    $(this).parent().siblings().find('.fullvideo__video-player').trigger('play');
+     $(this).parent().fadeOut();
   })
   videoCont.click(function(){
-    video.trigger('pause');
-    videoButton.fadeIn();
-    videoButtonOverlay.fadeIn();
+    $(this).find('.fullvideo__video-player').trigger('pause');
+    $(this).siblings().fadeIn();
   })
 
 

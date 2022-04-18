@@ -17,17 +17,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175441723-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6THQ588J2D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-175441723-1');
-	</script>
+  gtag('config', 'G-6THQ588J2D');
+</script>
 
 </head>
 

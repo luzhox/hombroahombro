@@ -13,7 +13,7 @@
     </div>
     <div class="imgStory" data-aos="fade-up"  style="background:url('<?php the_sub_field('imgDefault')?>')"></div>
   </div>
-  <div class="container our-story__ages">
+  <div class="container our-story__ages owl-theme owl-carousel">
   <?php if (have_rows('timeline')) {
               while (have_rows('timeline')) {
                   the_row(); ?>
@@ -28,7 +28,7 @@
   document.addEventListener('DOMContentLoaded',function(){
     $('.our-story__age ').click(function(){
       $(this).addClass('active')
-      $(this).siblings().removeClass('active')
+      $(this).parent().siblings().find('.our-story__age').removeClass('active')
       var imagen = $(this).data('img')
       var idItem= $(this).data('id')
       $('#'+idItem).addClass('active')

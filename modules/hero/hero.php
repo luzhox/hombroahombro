@@ -13,7 +13,11 @@
               <h1 class="title"><?php the_sub_field('titulo')?></h1>
               <div class="hero-principal__text"><?php the_sub_field('descripcion')?></div>
               <div class="botones">
-                  <a id="<?php the_sub_field('id')?>" href="#" class="btn btn-red"><?php the_sub_field('btnText')?></a>
+              <?php $btn = get_sub_field('btnText');
+                    if( !empty( $btn ) ): ?>
+                  <a id="<?php the_sub_field('id')?>" href="#" class="btn btn-red" style="cursor:pointer"><?php the_sub_field('btnText')?></a>
+                  <?php endif; ?>
+
               </div>
           </div>
       </div>

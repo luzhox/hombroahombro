@@ -5,6 +5,28 @@ footer.site-footer {
   display: block;
   border-top: 1px solid rgb(215, 219, 238);
   clear: both;
+  .develope {
+    .title {
+      margin-bottom: 16px;
+      font-size: 12px;
+      line-height: 160%;
+      color: $grisOscuro;
+      font-family: $primary-text;
+      letter-spacing: 0.6px;
+      font-weight: 400;
+    }
+
+    .developer {
+      font-size: 12px;
+      margin-top: 8px;
+
+      &__logo {
+        width: 120px;
+        height: auto;
+        margin-top: 4px;
+      }
+    }
+  }
   .container {
     min-height: 60px;
     margin: 0px auto;
@@ -22,17 +44,16 @@ footer.site-footer {
       width: get-column-width(29, 29);
       display: inline-block;
       @media only screen and (min-width: 700px) {
-        width: get-column-width(20, 29);
+        width: get-column-width(15, 29);
         text-align: left;
       }
       h4 {
         color: $grisOscuro;
         font-weight: 300;
         font-size: 12px;
-        text-align: center;
+        text-align: left;
         margin-top: 20px;
         @include tablet {
-          text-align: left;
           margin-top: 0px;
           margin-bottom: 20px;
         }
@@ -67,7 +88,7 @@ footer.site-footer {
 
       p {
         color: $grisOscuro;
-        text-align: center;
+        text-align: left;
         font-weight: 300;
         font-size: 14px;
         width: get-column-width(29, 29);

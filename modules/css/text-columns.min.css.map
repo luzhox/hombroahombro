@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../text-columns/text-columns.scss"
+    ],
+    "names": [],
+    "file": "text-columns.min.css"
+}

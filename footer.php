@@ -3,33 +3,36 @@
 <footer class="site-footer"  role="contentinfo">
 <div class="container">
 <div class="context">
-<p> hombroahombro.org.pe 2019 – Todos los derechos reservados | <a href="http://perspektiva.pe/">Realizada por Perspektiva</a></p>
+  <p> hombroahombro.org.pe 2019 – Todos los derechos reservados</p>
 	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='/';}"></iframe>
-
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSdzbZDz7wRwouGtRH2oPXn6bIl1AgwewRYrKNAom-jBtcY0kw/formResponse" method="POST" id="ss-form" target="hidden_iframe"  onsubmit="submitted=true;">
-<h4>Recibe nuestro boletín mensual:</h4>
-<div class="input-field-subs">
-  <div class="input-field-subs__content">
-      <input type="text" class="input-field-subs__field" placeholder="Tu correo" name="entry.1692126455"  required="">
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdzbZDz7wRwouGtRH2oPXn6bIl1AgwewRYrKNAom-jBtcY0kw/formResponse" method="POST" id="ss-form" target="hidden_iframe"  onsubmit="submitted=true;">
+  <h4>Recibe nuestro boletín mensual:</h4>
+  <div class="input-field-subs">
+    <div class="input-field-subs__content">
+        <input type="text" class="input-field-subs__field" placeholder="Tu correo" name="entry.1692126455"  required="">
+      </div>
+      <input type="submit" value="ENVIAR" class="input-field-subs__btn ">
     </div>
-    <input type="submit" value="ENVIAR" class="input-field-subs__btn ">
+  </form>
   </div>
-</form>
-</div>
 
   <div class="redes-sociales">
-  <div class="sociales">
-    <span>Búscanos en: </span>
-    <div class="buttons buttons__socials">
-      <a href="https://www.facebook.com/HombroaHombroPe/" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/facebook-1.jpg" alt=""></a>
-      <a href="https://www.instagram.com/_hombroahombro_/" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/instagram.jpg" alt=""></a>
-      <a href="https://www.linkedin.com/company/hombro-a-hombro" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/linkedin.png" alt=""></a>
-      <a href="https://twitter.com/HombroaHombroPe" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/twitter.png" alt=""></a>
+      <div class="sociales">
+      <span>Búscanos en: </span>
+      <div class="buttons buttons__socials">
+        <a href="https://www.facebook.com/HombroaHombroPe/" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/facebook-1.jpg" alt=""></a>
+        <a href="https://www.instagram.com/_hombroahombro_/" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/instagram.jpg" alt=""></a>
+        <a href="https://www.linkedin.com/company/hombro-a-hombro" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/linkedin.png" alt=""></a>
+        <a href="https://twitter.com/HombroaHombroPe" class="buttons__social" ><img width="44" src="http://hombroahombro.hadronica.pe/wp/wp-content/uploads/2021/10/twitter.png" alt=""></a>
 
-    </div>
+      </div>
   </div>
-</div>
 
+</div>
+<div class="develope">
+    <p class="title">Designed &amp; developed by:</p>
+    <a href="https://perspektiva.pe/" target="_blank"><img class="developer__logo" src="/wp-content/uploads/2021/10/perspektiva-logo.svg" alt="Perspektiva"></a>
+</div>
 </div> <!--container-->
 
 </footer><!--Cierra el footer-->
@@ -83,9 +86,6 @@
 
 </div>
 </div> <!-- cierra el page -->
-
-
-
 
 <?php wp_footer(); ?>
 <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '00523410-b64b-4a15-80b0-ff74a58cd555', f: true }); done = true; } }; })();</script>

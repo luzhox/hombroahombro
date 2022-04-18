@@ -13,6 +13,9 @@
     display: flex;
     flex-flow: wrap;
     align-items: center;
+    @include desktop{
+      min-width: 1184px;
+    }
   }
   &__img {
     position: absolute;
@@ -24,10 +27,31 @@
       opacity: 1;
       position: relative;
     }
-    img {
-      width: 100%;
-      height: auto;
+    @include mobile{
+      svg{
+        width: 90%;
+        height: auto;
+      }
     }
+    .pathHover{
+      cursor: pointer;
+      &:hover{
+
+        fill: #D4035E;
+
+    }
+      &.disabled{
+        fill: #ececec;
+        cursor: initial;
+        &:hover{
+
+          fill: #ececec;
+
+      }
+      }
+
+    }
+
   }
   &__text {
     position: relative;
@@ -48,6 +72,121 @@
         color: $primaryButton;
         font-weight: 700;
       }
+    }
+  }
+  &__button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background: $primary;
+    display: none;
+    @include tablet{
+      display: block;
+    }
+    &.tumbes{
+      top: 160px;
+      left: 26px;
+    }
+    &.piura{
+      top: 212px;
+      left: 30px;
+    }
+    &.iquitos{
+      top: 197px;
+      left: inherit;
+      right: 280px;
+    }
+    &.cajamarca{
+      top: 270px;
+      left: 98px;
+    }
+
+    &.trujillo{
+      top: 342px;
+      left: 109px;
+    }
+
+
+    &.lima{
+      top: 500px;
+      left: 186px;
+    }
+    &.huanuco{
+      top: 408px;
+      left: 209px;
+    }
+    &.huancayo{
+      top: 481px;
+      left: 257px;
+    }
+    &.pucallpa{
+      top: 418px;
+      left: 320px;
+    }
+    &.tacna{
+      bottom: 32px;
+      top: initial;
+      left: 454px;
+    }
+    &.moquegua{
+      bottom: 70px;
+      top: initial;
+      left: 427px;
+    }
+    &.arequipa{
+      bottom: 113px;
+    top: initial;
+    left: 357px;
+    }
+    &.puno{
+      bottom: 158px;
+      top: initial;
+      left: initial;
+      right: 81px;
+    }
+    &.cusco{
+      bottom: 222px;
+      top: initial;
+      left: initial;
+      right: 165px;
+    }
+    &.abancay{
+      bottom: 184px;
+      top: initial;
+      left: initial;
+      right: 195px;
+    }
+    &.ayacucho{
+      bottom: 164px;
+      top: initial;
+      left: initial;
+      right: 251px;
+    }
+    &.huancavelica{
+      bottom: 229px;
+      top: initial;
+      left: initial;
+      right: 284px;
+    }
+    &.sanmartin{
+      top: 302px;
+      left: 180px;
+    }
+    &.madredios{
+      bottom: 268px;
+      top: initial;
+      left: initial;
+      right: 100px;
+    }
+    &.lambayeque{
+      top: 270px;
+      left:56px;
     }
   }
 }

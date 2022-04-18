@@ -213,6 +213,25 @@ $('.slider-pdp.owl-carousel').owlCarousel({
   animateOut: 'fadeOut',
   animateIn: 'fadeIn',
 })
+
+$('.our-story__ages.owl-carousel').owlCarousel({
+  nav: true,
+  dots: false,
+  margin: 0,
+  loop: false,
+  items: 3,
+  responsive: {
+    0: {
+      items: 3,
+    },
+    600: {
+      items: 4,
+    },
+    1000: {
+      items: 9,
+    },
+  },
+})
 $('.patronato__brands.owl-carousel').owlCarousel({
   nav: true,
   margin: 0,
